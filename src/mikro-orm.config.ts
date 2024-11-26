@@ -21,7 +21,7 @@ class CustomMigrationGenerator extends TSMigrationGenerator {
     private includedTables = [
       'teachers',
       'students',
-      'students_items'
+      'teachers_student_items'
     ];
 
     generateMigrationFile(className: string, diff: { up: string[]; down: string[] }): string {
@@ -54,8 +54,8 @@ export default defineConfig({
     metadataProvider: TsMorphMetadataProvider,
     allowGlobalContext: true,
     metadataCache: { enabled: true },
-    // logger: logger.log.bind(logger),          // The logger function for logging db queries, disable in prod!
-    // debug: true,                             // Enable debug mode
+    logger: logger.log.bind(logger),          // The logger function for logging db queries, disable in prod!
+    debug: true,                             // Enable debug mode
 
     extensions: [
         Migrator                                      // Handle migrationsww, generate, apply and revert

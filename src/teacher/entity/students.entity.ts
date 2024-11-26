@@ -1,5 +1,5 @@
-import { Entity, ManyToOne, PrimaryKey, Property } from "@mikro-orm/core";
-import { Teachers } from "./teachers.entity";
+import { Cascade, Collection, Entity, ManyToOne, OneToMany, PrimaryKey, Property } from "@mikro-orm/core";
+import { TeachersStudentItems } from "./teachers-students-items.entity";
 
 @Entity()
 export class Students {
@@ -11,4 +11,7 @@ export class Students {
 
     @Property()
     grade: number;
+
+    @OneToMany(() => TeachersStudentItems, teach => teach.students, {cascade: [Cascade.PERSIST], eager: false})
+    teacher? = new Collection<TeachersStudentItems>(this);
 }

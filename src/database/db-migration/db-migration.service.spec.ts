@@ -2,7 +2,7 @@ import { IMigrator, MikroORM } from '@mikro-orm/core';
 import { Test, TestingModule } from '@nestjs/testing';
 import { DbMigrationService } from './db-migration.service';
 import { LoggingService } from '../../logging/logging.service';
-import { DefaultMocks } from '../../utils/mocks.util';
+import { Mocks } from '../../utils/mock.utils';
 
 jest.mock('@mikro-orm/core');
 
@@ -16,7 +16,7 @@ describe('DbMigrationService', () => {
       checkMigrationNeededReturn: boolean,
    ): { mockOrm: jest.Mocked<MikroORM>; mockLogger: jest.Mocked<LoggingService> } => {
 
-      mockLogger = DefaultMocks.loggerService;
+      mockLogger = Mocks.loggerService;
 
       mockOrm = {
          em: {

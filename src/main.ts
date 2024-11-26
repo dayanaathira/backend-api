@@ -43,7 +43,7 @@ async function bootstrap() {
   // Configure Swagger documentation, Create the Swagger document & Set up Swagger UI if env has swagger set to true
   if (process.env.swagger === 'true') {
     const config = new DocumentBuilder()
-      .setTitle('HIRARC Managemnet Swagger UI')
+      .setTitle('Swagger UI')
       .setVersion(process.env.npm_package_version)
       .addBearerAuth()
       .build();
@@ -55,10 +55,7 @@ async function bootstrap() {
   // Checking application
   try {
     // Run migrations before starting the app
-    await dbMigrationService.runMigrations();
-
-    // Seed necessary data to db before starting the app
-    // await dbSeederService.runSeeder();
+    // await dbMigrationService.runMigrations();
 
     await app.listen(port, () => {
       Logger.log(`Server is listening on port: ${port}`)

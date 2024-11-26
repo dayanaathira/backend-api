@@ -119,7 +119,7 @@
           "unsigned": true,
           "autoincrement": false,
           "primary": false,
-          "nullable": true,
+          "nullable": false,
           "length": null,
           "mappedType": "integer"
         },
@@ -129,19 +129,19 @@
           "unsigned": true,
           "autoincrement": false,
           "primary": false,
-          "nullable": true,
+          "nullable": false,
           "length": null,
           "mappedType": "integer"
         }
       },
-      "name": "students_items",
+      "name": "teachers_student_items",
       "indexes": [
         {
           "columnNames": [
             "teacher_id"
           ],
           "composite": false,
-          "keyName": "students_items_teacher_id_index",
+          "keyName": "teachers_student_items_teacher_id_index",
           "constraint": false,
           "primary": false,
           "unique": false
@@ -151,7 +151,7 @@
             "student_id"
           ],
           "composite": false,
-          "keyName": "students_items_student_id_index",
+          "keyName": "teachers_student_items_student_id_index",
           "constraint": false,
           "primary": false,
           "unique": false
@@ -169,30 +169,28 @@
       ],
       "checks": [],
       "foreignKeys": {
-        "students_items_teacher_id_foreign": {
-          "constraintName": "students_items_teacher_id_foreign",
+        "teachers_student_items_teacher_id_foreign": {
+          "constraintName": "teachers_student_items_teacher_id_foreign",
           "columnNames": [
             "teacher_id"
           ],
-          "localTableName": "students_items",
+          "localTableName": "teachers_student_items",
           "referencedColumnNames": [
             "id"
           ],
           "referencedTableName": "teachers",
-          "deleteRule": "set null",
           "updateRule": "cascade"
         },
-        "students_items_student_id_foreign": {
-          "constraintName": "students_items_student_id_foreign",
+        "teachers_student_items_student_id_foreign": {
+          "constraintName": "teachers_student_items_student_id_foreign",
           "columnNames": [
             "student_id"
           ],
-          "localTableName": "students_items",
+          "localTableName": "teachers_student_items",
           "referencedColumnNames": [
             "id"
           ],
           "referencedTableName": "students",
-          "deleteRule": "set null",
           "updateRule": "cascade"
         }
       },
