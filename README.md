@@ -1,11 +1,18 @@
 ## Description
 
-[API Documentation](https://serene-ocean-50222-5793158abbed.herokuapp.com/api-docs) 
+#### Technology Used ####
+- NestJs &#8594; Node.js framework for building scalable server-side applications
+- MikroOrm &#8594; MySQL library to map the database to the application's domain model
+- Logger &#8594; Winston
+
+#### Links #####
+- [API Documentation](https://serene-ocean-50222-5793158abbed.herokuapp.com/api-docs)
+- [API Endpoint](https://serene-ocean-50222-5793158abbed.herokuapp.com/teacher) 
 <br>
-##### Database Structure #####
+
+#### Database Structure ####
 ![Database Structure](./assets/database-structure.png)
-<br>
-[API Endpoint](https://serene-ocean-50222-5793158abbed.herokuapp.com/teacher)
+
 
 ## Installation
 
