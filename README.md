@@ -14,6 +14,9 @@
 ![Database Structure](./assets/database-structure.png)
 
 
+#### Deployment ####
+- The application is deployed on Heroku, using a jawsdb:kitefin database
+
 ## Installation
 
 ```bash
