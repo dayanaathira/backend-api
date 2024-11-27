@@ -1,6 +1,11 @@
 ## Description
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+[API Documentation](https://serene-ocean-50222-5793158abbed.herokuapp.com/api-docs) 
+<br>
+##### Database Structure #####
+![Database Structure](./assets/database-structure.png)
+<br>
+[API Endpoint](https://serene-ocean-50222-5793158abbed.herokuapp.com/teacher)
 
 ## Installation
 
