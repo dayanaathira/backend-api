@@ -1,0 +1,1 @@
+web: docker build -t parkeasy-assessment . && docker run -p $PORT:3000 parkeasy-assessment

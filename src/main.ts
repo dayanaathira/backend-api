@@ -55,7 +55,7 @@ async function bootstrap() {
   // Checking application
   try {
     // Run migrations before starting the app
-    // await dbMigrationService.runMigrations();
+    await dbMigrationService.runMigrations();
 
     await app.listen(port, () => {
       Logger.log(`Server is listening on port: ${port}`)
